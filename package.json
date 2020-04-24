@@ -4,12 +4,16 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "build": "cross-env MY_STEP=build next build",
+    "start": "cross-env MY_SECRET=1234 MY_STEP=start next start"
   },
   "dependencies": {
     "next": "9.3.5",
     "react": "16.13.1",
     "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0"
   }
 }
